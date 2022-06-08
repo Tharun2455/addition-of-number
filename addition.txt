@@ -1,0 +1,54 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    12:21:07 05/31/2022 
+-- Design Name: 
+-- Module Name:    add - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_signed.all;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity add is
+    Port ( --clk : in  STD_LOGIC;
+           a : in  STD_LOGIC_VECTOR (30 downto 0);
+           b : in  STD_LOGIC_VECTOR (61 downto 0);
+			   dout:out std_logic_vector(95 downto 0);
+
+
+
+           c : in  STD_LOGIC_VECTOR (95 downto 0));
+end add;
+
+architecture Behavioral of add is
+
+
+begin
+--if(rising_edge (clk))then
+dout<=c+(x"00000000"&"00"&b)+(x"0000000000000000"&'0'&a);
+
+end Behavioral;
+
